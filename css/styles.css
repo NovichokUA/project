@@ -43,10 +43,61 @@ img {
     min-width: 320px;
     padding-left: 20px;
     padding-right: 20px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .order-background-container {
-    background-image: url(./images/order-background-mobile.jpg);
+    height: 550px;
+    background-image: url(../images/order-background-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.order-container {
+    background-color: var(--primary-color, #1C2225);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.order-title {
+    color: var(--white, #FCF9F9);
+    font-family: Manrope;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+}
+
+.order-title-changed {
+    color: var(--white, #ECD979);
+}
+
+.order-form-item {
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid rgba(252, 249, 249, 0.10);
+    color: var(--secondary-color, #FCF9F9);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.02em;
 }
 
 /* @media screen and (min-width: 375px) {
