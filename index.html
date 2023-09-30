@@ -68,13 +68,29 @@
           id="order-comments"
           placeholder="Comments"
         ></textarea>
+
+        <button class="order-btn" type="submit">
+          Send
+          <svg width="26" height="10">
+            <use href="./images/svg/symbol-defs.svg#icon-untitled"></use>
+          </svg>
+        </button>
       </form>
-      <button class="order-btn" type="submit">
-        Send
-        <svg width="26" height="10">
-          <use href="./images/svg/symbol-defs.svg#icon-untitled"></use>
-        </svg>
-      </button>
+      <img
+        class="order-pictright"
+        srcset="
+          ./images/order-content-img-tablet.jpg      638w,
+          ./images/order-content-img-tablet@2x.jpg  1276w,
+          ./images/order-content-img-desktop.jpg     524w,
+          ./images/order-content-img-desktop@2x.jpg 1048w
+        "
+        sizes="
+        (min-width: 768px) 638px,
+        (min-width: 1280px) 524px
+        "
+        src="./images/order-content-img-tablet.jpg"
+        alt="picture cloth"
+      />
     </section>
   </body>
 </html>

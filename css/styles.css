@@ -84,12 +84,12 @@ img {
 }
 
 .order-title-changed {
-    color: var(--white, #ECD979);
+    color: var(--accent-color, #ECD979);
 }
 
 .order-form {
     padding-top: 40px;
-    padding-bottom: 40px;
+
 }
 
 .order-form-item {
@@ -107,7 +107,7 @@ img {
     width: 100%;
     padding: 14px 16px;
     margin-bottom: 20px;
-
+    transition: border 250ms ease-in-out;
 }
 
 ::placeholder {
@@ -136,10 +136,11 @@ img {
     width: 100%;
     height: 196px;
     resize: none;
+    margin-bottom: 40px;
+    transition: border 250ms ease-in-out;
 }
 
 .order-btn {
-    border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 36px;
@@ -149,6 +150,7 @@ img {
     display: block;
     border: 1px solid rgba(252, 249, 249, 0.10);
     background-color: var(--primary-color, #1C2225);
+    margin: 0 auto;
     color: var(--white, #FCF9F9);
     font-family: Manrope;
     font-size: 14px;
@@ -157,31 +159,152 @@ img {
     line-height: normal;
     letter-spacing: -0.56px;
     text-transform: uppercase;
-    margin: 0 auto;
+    transition: border 250ms ease-in-out;
 }
 
-.order-form-item {}
+.order-form-item:hover,
+.order-form-item:active {
+    border: 1px solid rgba(252, 249, 249, 0.60);
+}
 
-/* @media screen and (min-width: 375px) {
+.order-textarea-commit:hover,
+.order-textarea-commit:active {
+    border: 1px solid rgba(252, 249, 249, 0.60);
+}
+
+.order-btn:hover,
+.order-btn:active {
+    border: 1px solid var(--yellow, #ECD979);
+}
+
+
+
+
+@media screen and (min-width: 375px) {
     .container {
         width: 375px;
         margin-left: auto;
         margin-right: auto;
     }
+
+    .order-title {
+        width: 335px;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .container {
-        width: 704px;
+        width: 768px;
         padding-left: 32px;
         padding-right: 32px;
     }
+
+    .order-background-container {
+        height: 776px;
+        background-image: url(../images/order-background-tablet.jpg);
+    }
+
+    .order-container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+            url(../images/order-ornament.jpg);
+        background-size: 323px 484px;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+
+    }
+
+    .order-title {
+        width: 542px;
+
+        font-family: Manrope;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 58px;
+        /* 131.818% */
+        letter-spacing: -1.32px;
+    }
+
+    ::placeholder {
+        color: rgba(252, 249, 249, 0.50);
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.32px;
+    }
+
+    .order-form-item {
+        width: 508px;
+        height: 50px;
+    }
+
+    .order-textarea-commit {
+        width: 508px;
+    }
+
+    .order-btn {
+        margin: 0;
+        margin-bottom: 100px;
+    }
+
+    .order-form-item:focus {
+        border: 1px solid rgba(252, 249, 249, 0.60);
+    }
+
+    .order-textarea-commit:focus {
+        border: 1px solid rgba(252, 249, 249, 0.60);
+    }
+
+    .order-btn:focus {
+        border: 1px solid var(--yellow, #ECD979);
+    }
+
+    .order-pictright {
+        margin-left: auto;
+    }
 }
 
-@media screen and (min-width: 1080px) {
+/*@media screen and (min-width: 1080px) {
     .container {
         width: 1080px;
         padding-left: 100px;
         padding-right: 100px;
     }
 } */
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1280px),
+screen and (min-resolution: 2dppx) and (min-width: 1280px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 1280px) {
+    .order-background-container {
+        background-image: url(../images/order-background-desktop@2x.jpg);
+    }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 1279px),
+screen and (min-resolution: 2dppx) and (max-width: 1279px),
+screen and (min-device-pixel-ratio: 2) and (max-width: 1279px) {
+    .order-background-container {
+        background-image: url(../images/order-background-tablet@2x.jpg);
+    }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px),
+screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+    .order-background-container {
+        background-image: url(../images/order-background-mobile@2x.jpg);
+    }
+}
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+    .order-container {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+            url(../images/order-ornament@2x.jpg);
+    }
+}
