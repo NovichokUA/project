@@ -27,7 +27,7 @@
         <span class="order-title-changed">Your order</span> is our priority:
         Personalized approach and quality of service
       </p>
-      <form name="order-form">
+      <form class="order-form" name="order-form">
         <label
           class="visually-hidden"
           for="order-user-name"
@@ -53,6 +53,7 @@
           type="email"
           id="order-user-email"
           name="order-user-email"
+          placeholder="Enter your email"
           required
         />
         <label
@@ -61,11 +62,17 @@
           aria-label="input your comments"
         >
         </label>
-        <textarea name="order-comments" id="order-comments"></textarea>
+        <textarea
+          class="order-textarea-commit"
+          name="order-comments"
+          id="order-comments"
+          placeholder="Comments"
+        ></textarea>
       </form>
-      <button>
-        <svg>
-          <use></use>
+      <button class="order-btn" type="submit">
+        Send
+        <svg width="26" height="10">
+          <use href="./images/svg/symbol-defs.svg#icon-untitled"></use>
         </svg>
       </button>
     </section>
